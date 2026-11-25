@@ -1,5 +1,4 @@
 'use strict';
-const crypto = require('crypto');
 const { col } = require('../../lib/db');
 const { isDup } = require('../../lib/util');
 const { emit } = require('../../lib/feed');
@@ -30,7 +29,9 @@ async function claim(ws, contact, agent) {
       { $set: { assignee: agent }, $setOnInsert: { ws, contact, status: 'open', lastActivity: new Date() } },
       { upsert: true });
     if (r.modifiedCount || r.upsertedCount) {
-      await emit(ws, 'as:' + crypto.randomUUID(), { type: 'conversation.assigned', contact, assignee: agent });
+      // Use a stable key so the same assignment is not emitted twice
+      // (e.g. two copies racing to emit for the same claim)
+      await emit(ws, 'as:' + contact + ':' + agent, { type: 'conversation.assigned', contact, assignee: agent });
     }
     return true;
   } catch (e) { if (isDup(e)) return false; throw e; }
