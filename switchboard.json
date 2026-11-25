@@ -1,0 +1,5 @@
+{
+  "install": "npm --prefix server install",
+  "start": "npm --prefix server start",
+  "health": "/healthz"
+}
