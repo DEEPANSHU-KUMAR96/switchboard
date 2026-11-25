@@ -1,13 +1,13 @@
 {
   "profile": "full",
-  "startedAt": "2026-11-25T13:14:56.534Z",
+  "startedAt": "2026-11-25T13:22:17.459Z",
   "checks": [
     {
       "level": 1,
       "id": "inbound_complete",
       "max": 4,
       "got": 4,
-      "detail": "173 of 173 genuine messages stored"
+      "detail": "175 of 175 genuine messages stored"
     },
     {
       "level": 1,
@@ -49,7 +49,7 @@
       "id": "ack_speed",
       "max": 1,
       "got": 1,
-      "detail": "p95 acknowledgement 12 ms, 0 first attempts not acknowledged"
+      "detail": "p95 acknowledgement 17 ms, 0 first attempts not acknowledged"
     },
     {
       "level": 1,
@@ -108,5 +108,5 @@
     }
   },
   "error": "GET /__grader/snapshot returned 502",
-  "finishedAt": "2026-11-25T13:16:58.980Z"
+  "finishedAt": "2026-11-25T13:24:14.470Z"
 }
