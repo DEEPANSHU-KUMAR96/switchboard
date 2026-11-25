@@ -1,13 +1,13 @@
 {
   "profile": "full",
-  "startedAt": "2026-11-25T13:22:17.459Z",
+  "startedAt": "2026-11-25T13:41:53.377Z",
   "checks": [
     {
       "level": 1,
       "id": "inbound_complete",
       "max": 4,
       "got": 4,
-      "detail": "175 of 175 genuine messages stored"
+      "detail": "171 of 171 genuine messages stored"
     },
     {
       "level": 1,
@@ -49,7 +49,7 @@
       "id": "ack_speed",
       "max": 1,
       "got": 1,
-      "detail": "p95 acknowledgement 17 ms, 0 first attempts not acknowledged"
+      "detail": "p95 acknowledgement 27 ms, 0 first attempts not acknowledged"
     },
     {
       "level": 1,
@@ -84,7 +84,7 @@
       "id": "outage_recovery",
       "max": 2,
       "got": 2,
-      "detail": "6 of 6 replies requested during a 8 s provider outage were delivered afterwards, 0 more than once; 28 requests made during the outage"
+      "detail": "6 of 6 replies requested during a 8 s provider outage were delivered afterwards, 0 more than once; 27 requests made during the outage"
     }
   ],
   "score": 24,
@@ -108,5 +108,5 @@
     }
   },
   "error": "GET /__grader/snapshot returned 502",
-  "finishedAt": "2026-11-25T13:24:14.470Z"
+  "finishedAt": "2026-11-25T13:43:52.628Z"
 }
